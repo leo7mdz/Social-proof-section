@@ -1,0 +1,152 @@
+:root {
+  --Very-Dark-Magenta: hsl(300, 43%, 22%);
+  --Soft-Pink: hsl(333, 80%, 67%);
+  --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+  --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+  --White: hsl(0, 0%, 100%);
+}
+
+html {
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+body {
+  width: 90%;
+  height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header {
+  text-align: center;
+}
+
+.header__tittle {
+  color: var(--Very-Dark-Magenta);
+  margin-bottom: 0;
+}
+.header__paragraph {
+  font-family: sans-serif;
+  color: grey;
+  font-weight: 500;
+}
+
+.rated {
+  text-align: center;
+}
+
+.rates__start {
+  height: 20px;
+  width: 20px;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  display: inline-block;
+  background-color: darkgoldenrod;
+}
+.rates {
+  background-color: var(--Light-Grayish-Magenta);
+  border-radius: 5%;
+  padding: 5px;
+  margin-top: 10px;
+  position: relative;
+}
+
+.rates__paragraph {
+  color: var(--Very-Dark-Magenta);
+  margin-top: 0;
+}
+
+/* .testimonials{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+ */
+.testimonial {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--Very-Dark-Magenta);
+  margin: 15px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.testimonial__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonial__img {
+  border-radius: 50%;
+  display: block;
+  max-width: 60%;
+}
+
+.testimonial__tittle {
+  margin-bottom: 0;
+  color: white;
+  font-size: 16px;
+  padding-left: 15px;
+}
+.testimonial__subtittle {
+  padding-left: 15px;
+  margin-top: 5px;
+  color: var(--Soft-Pink);
+}
+.testimonial__experience {
+  color: white;
+  font-weight: 400;
+}
+
+@media screen and (min-width: 750px) {
+  .header {
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: left;
+    width: 30%;
+  }
+  .rated {
+    display: inline-flex;
+    flex-direction: column;
+    width: 35%;
+    margin-left: 200px;
+  }
+  .rates {
+    display: flex;
+  }
+  .rates.first {
+    left: 20px;
+  }
+  .rates.second {
+    left: 35px;
+  }
+  .testimonials {
+    display: flex;
+    flex-direction: row;
+  }
+  .testimonial {
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+  }
+  .testimonial.first {
+    top: 15px;
+  }
+
+  .testimonial.second {
+    top: 30px;
+  }
+}
